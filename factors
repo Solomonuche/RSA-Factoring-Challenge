@@ -93,13 +93,14 @@ def main():
     to return the smallest prime number making up the product
     """
 
-    if len(argv) < 2:
-        print("Usage: factors <file>")
-        return
+    if len(argv) != 2:
+        exit()
 
     try:
         with open(argv[1], 'r') as file:
             for lines in file:
+                if lines = "":
+                    continue
                 line = lines
                 if len(line) > 18:
                     continue
