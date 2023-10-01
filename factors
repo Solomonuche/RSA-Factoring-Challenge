@@ -6,6 +6,7 @@ RSA Factoring Challenge
 
 from sys import argv
 import random
+import sys
 
 
 def gcd(a, b):
@@ -94,7 +95,7 @@ def main():
     """
 
     if len(argv) != 2:
-        exit()
+        sys.exit()
 
     try:
         with open(argv[1], 'r') as file:
