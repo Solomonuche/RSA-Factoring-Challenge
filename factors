@@ -99,8 +99,6 @@ def main():
     try:
         with open(argv[1], 'r') as file:
             for lines in file:
-                if lines = "":
-                    continue
                 line = lines
                 if len(line) > 18:
                     continue
