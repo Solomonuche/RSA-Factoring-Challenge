@@ -95,7 +95,7 @@ def main():
     """
 
     if len(argv) != 2:
-        sys.exit()
+        sys.exit(0)
 
     try:
         with open(argv[1], 'r') as file:
@@ -104,10 +104,8 @@ def main():
                 if len(line) > 18:
                     continue
                 factorize(int(line))
-    except FileNotFoundError:
-        print("File not found")
-    except PermissionError:
-        print("Permission denied")
+    except:
+        pass
 
 
 if __name__ == "__main__":
