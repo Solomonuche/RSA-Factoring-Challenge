@@ -21,7 +21,7 @@ def factorize(number):
 
     if number <= 1:
         return
-                
+
     while number % i:
         i += 1
     print(f"{number}={number // i}*{i}")
@@ -34,7 +34,7 @@ def main():
     """
 
     if len(argv) != 2:
-        exit()
+        sys.exit(0)
 
     try:
         with open(argv[1], 'r') as file:
