@@ -19,7 +19,7 @@ def factorize(number):
 
     i = 2
 
-    if number < 2:
+    if number <= 1:
         return
                 
     while number % i:
@@ -34,7 +34,7 @@ def main():
     """
 
     if len(argv) != 2:
-        sys.exit(0)
+        exit()
 
     try:
         with open(argv[1], 'r') as file:
