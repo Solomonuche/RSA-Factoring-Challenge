@@ -39,6 +39,8 @@ def main():
     try:
         with open(argv[1], 'r') as file:
             for lines in file:
+                if lines == "":
+                    continue
                 line = int(lines.split('\n')[0])
                 factorize(line)
     except Exception as err:
