@@ -5,7 +5,6 @@ RSA Factoring Challenge
 
 
 from sys import argv
-import random
 import sys
 
 
@@ -41,7 +40,7 @@ def main():
             for lines in file:
                 if lines == "":
                     continue
-                line = int(lines.split('\n')[0])
+                line = int(lines.strip())
                 factorize(line)
     except Exception as err:
         pass
