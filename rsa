@@ -1,0 +1,50 @@
+#!/usr/bin/python3
+"""
+RSA Factoring Challenge
+"""
+
+
+from sys import argv
+import sys
+
+
+def factorize(number):
+    """
+    Factorize function
+
+    Return:
+        n = p*q
+    """
+
+    i = 2
+
+    if number <= 1:
+        return
+
+    while number % i:
+        i += 1
+    print(f"{number}={number // i}*{i}")
+
+
+def main():
+    """
+    Entry point of the program, it opens a file calls factorize function
+    to return the smallest prime number making up the product
+    """
+
+    if len(argv) != 2:
+        sys.exit(1)
+
+    try:
+        with open(argv[1], 'r') as file:
+            for lines in file:
+                if lines == "":
+                    continue
+                line = int(lines.strip())
+                factorize(line)
+    except Exception as err:
+        pass
+
+
+if __name__ == "__main__":
+    main()
